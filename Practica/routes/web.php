@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Student\StudentController;
-
+use App\Http\Controllers\StudentController;
+use App\Http\Requests\StudentRequest;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,10 +25,10 @@ Route::get('/docentes/{codigo}', function ($codigo) {
     
 });
 
-// Route::get('/estudiantes', function () {
-//     return view('estudiantes');
-// })->name('Marvin');
+Route::get('/estudiantes', function () {
+    return view('estudiantes');
+})->name('Marvin');
 
-
-Route::get('/alumnos',[StudentController::class,'index']);
-
+Route::resource('estudiantes',StudentController::class);
+// Route::get('/alumnos',[StudentController::class,'index']);
+// Route::post('/alumnos',[StudentController::class,'store']);

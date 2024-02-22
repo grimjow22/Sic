@@ -11,7 +11,7 @@
 
     @section('contenido')
         <h1>Bienvenido a Mi Sitio Web {{$codigo}}</h1>
-        <a href="{{route('alumnos')}}">Ver Alumnos</a>
+        <a href="{{route('Marvin')}}">Ver Alumnos</a>
     @endsection
 </body>
 
